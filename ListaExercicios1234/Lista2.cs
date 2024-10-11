@@ -27,12 +27,86 @@ namespace ListaExercicios1234
 
         internal void exercicio10()
         {
-            throw new NotImplementedException();
+            int A, B, C;
+
+            Console.WriteLine("Digite o primeiro valor:");
+            A = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo valor:");
+            B = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o terceiro valor:");
+            C = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            if (A < B && A < C)
+            {
+                if (B < C)
+                {
+                    Console.WriteLine(A + "\n" + B + "\n" + C);
+                }
+                else
+                {
+                    Console.WriteLine(A + "\n" + C + "\n" + B);
+                }
+            }
+            else if (B < A && B < C)
+            {
+                if (A < C)
+                {
+                    Console.WriteLine(B + "\n" + A + "\n" + C);
+                }
+                else
+                {
+                    Console.WriteLine(B + "\n" + C + "\n" + A);
+                }
+            }
+            else
+            {
+                if (A < B)
+                {
+                    Console.WriteLine(C + "\n" + A + "\n" + B);
+                }
+                else
+                {
+                    Console.WriteLine(C + "\n" + B + "\n" + A);
+
+                }
+            }
         }
 
         internal void exercicio11()
         {
-            throw new NotImplementedException();
+            int inicio, fim;
+
+            Console.WriteLine("Digite a hora de início do jogo (0 a 23):");
+            inicio = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite a hora de fim do jogo (0 a 23):");
+            fim = Convert.ToInt32(Console.ReadLine());
+
+            if (inicio < 0 || inicio > 23 || fim < 0 || fim > 23)
+            {
+                Console.WriteLine("As horas devem estar entre 0 e 23.");
+                return;
+            }
+            int duracao;
+            if (fim >= inicio)
+            {
+                duracao = fim - inicio;
+            }
+            else
+            {
+                duracao = (24 - inicio) + fim;
+            }
+            if (duracao > 24)
+            {
+                Console.WriteLine("A duração do jogo excedeu o tempo permitido de 24 horas.");
+                return;
+            }
+            int horasRestantes = 24 - duracao;
+
+            Console.WriteLine($"Horas jogadas: {duracao} horas");
+            Console.WriteLine($"Horas restantes: {horasRestantes} horas");
         }
 
         internal void exercicio2()
@@ -189,7 +263,54 @@ namespace ListaExercicios1234
 
         internal void exercicio9()
         {
-            throw new NotImplementedException();
+            int A, B, C;
+
+            Console.WriteLine("Digite o primeiro valor:");
+            A = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo valor:");
+            B = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o terceiro valor:");
+            C = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            if (A > B && A > C)
+            {
+                if (B > C)
+                {
+                    Console.WriteLine(A + "\n" + B + "\n" + C);
+                }
+                else
+                {
+                    Console.WriteLine(A + "\n" + C + "\n" + B);
+                }
+            }
+            else if (B > A && B > C)
+            {
+                if (A > C)
+                {
+                    Console.WriteLine(B + "\n" + A + "\n" + C);
+                }
+                else
+                {
+                    Console.WriteLine(B + "\n" + C + "\n" + A);
+                }
+            }
+            else
+            {
+               if (A > B)
+                {
+                    Console.WriteLine(C + "\n" + A + "\n" + B);
+                }
+                else
+                {
+                    Console.WriteLine(C + "\n" + B+ "\n" + A);
+
+                }
+             
+            }
+
+
         }
     }
 }
